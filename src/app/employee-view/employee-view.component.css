@@ -1,0 +1,44 @@
+
+.glyphicon {  margin-bottom: 10px;margin-right: 10px;}
+
+small {
+  display: block;
+  line-height: 1.428571429;
+  color: #999;
+}
+.primary-color{
+  color: #0079D3;
+}
+.fa-square-green {
+  color: #b3fcb0;
+}
+
+.fa-square-red{
+  color: #fcb7b0;
+}
+.employee-item{
+   margin: 5px 10px 5px 0px;
+   font-size: 17px;
+   border-bottom: 1px solid #eeeeee;
+ }
+.shadow-sm {
+  box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+}
+.img {
+  width: 160px;
+  height: 160px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.user-dashboard-info-box .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 30px 0;
+}

@@ -1,0 +1,8 @@
+<div class="container">
+  <div *ngIf="!this.isLoggedIn">
+    <app-landing></app-landing>
+  </div>
+  <div *ngIf="this.isLoggedIn">
+    <app-employee-list></app-employee-list>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<div>
+  <div  class="shadow-sm" [ngClass]="{greenClass: timeSheet.paidOff, redClass: !timeSheet.paidOff}">
+  <div class="employee-item">
+    <div class="font-weight-bold pt-2 pb-2 text-center text-uppercase">
+      {{timeSheet.description}}
+    </div>
+    <div class="p-2">
+      <span>Total amount: </span><span class="font-weight-bolder">{{totalAmountInHrk}} HRK</span>
+    </div>
+  <div class="p-2">
+    <span class="fa fa-dollar pr-1"></span>{{timeSheet.hourlyRateHRK}} <span class="font-weight-light">HRK/Hour</span>
+  </div>
+  <div class="p-2">
+    <span class="fa fa-clock-o pr-1"></span>{{(timeSheet.startTime | date:'MMM d y H:mm')}} - {{(timeSheet.endTime | date:'MMM d y H:mm')}}
+  </div>
+  </div>
+  </div>
+</div>

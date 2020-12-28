@@ -1,0 +1,36 @@
+<header>
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+    <div class="flex-grow-1">
+      <a aria-label="Home" class="logo" routerLink="/home">
+        <span class="fa fa-book"></span>
+        <span class="company-text">
+          Home
+                </span>
+      </a>
+    </div>
+    <div class="flex-grow-1 float-left" *ngIf="this.isLoggedIn">
+      <a aria-label="Employees" class="nav-item fa fa-user" routerLink="/employee-create">
+        <span class="pl-1">New Employee</span>
+      </a>
+      <a aria-label="TimeSheets" class="nav-item fa fa-envelope pl-5" routerLink="/time-sheet">
+        <span class="pl-1">All Time Sheets</span>
+      </a>
+    </div>
+  <div class="flex-grow-1 float-right">
+    <div *ngIf="isLoggedIn" ngbDropdown class="float-right">
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <!--<button class="login" (click)="goToUserProfile()" ngbDropdownItem>Profile</button>-->
+        <button class="sign-up ml-1" (click)="logout()" ngbDropdownItem>Logout</button>
+      </div>
+      <button class="userdetails" id="dropdownBasic1" ngbDropdownToggle>
+        <span><img class="account-icon" src="https://bootdey.com/img/Content/avatar/avatar7.png" alt=""></span>
+        {{username}}
+      </button>
+    </div>
+    <div *ngIf="!isLoggedIn">
+      <a routerLink="/signup" class="float-right sign-up mr-2">Sign up</a>
+      <a routerLink="/login" class="float-right login mr-2">Log in</a>
+    </div>
+  </div>
+  </nav>
+</header>

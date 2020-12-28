@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row pt-5">
+    <div class="col-xs-12 col-sm-6 col-md-10">
+      <div class="mt-4" *ngIf="timeSheets">
+        <div class="pl-4">
+          <span class="fa fa-square fa-square-green p-1"></span><span>Employee paid</span><br>
+          <span class="fa fa-square fa-square-red p-1"></span><span>Employee not paid</span>
+        </div>
+        <div class="col col-auto m-3" *ngFor="let timeSheet of timeSheets">
+          <div class="shadow-sm" [ngClass]="{greenClass: timeSheet.paidOff, redClass: !timeSheet.paidOff}">
+            <app-timesheet-item [timeSheet] = timeSheet></app-timesheet-item>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

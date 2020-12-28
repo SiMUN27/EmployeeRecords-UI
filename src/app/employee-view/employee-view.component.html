@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="row pt-5">
+    <div class="col-xs-12 col-sm-6 col-md-6">
+      <div class="well well-sm">
+        <div class="row">
+          <div class="col-sm-6 col-md-6 pr-5">
+            <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="" class="img">
+          </div>
+          <div class="col-sm-6 col-md-6 pr-5">
+            <h4 class="primary-color">{{employee?.name}} {{employee?.surname}}</h4>
+            <small><cite title="Zagreb, 10000">Zagreb, 10000<i>
+            </i></cite></small>
+            <p>
+              <i class="fa fa-envelope primary-color pr-2"></i>{{employee?.email}}
+              <br />
+              <i class="fa fa-globe primary-color pr-2"></i><a>{{employee?.position}}</a>
+              <br />
+            </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  <div class="mt-4">
+    <span class="fa fa-square fa-square-green p-1"></span><span>Employee paid</span><br>
+    <span class="fa fa-square fa-square-red p-1"></span><span>Employee not paid</span>
+  </div>
+  <div class="row" *ngIf="timeSheets">
+      <div class="col col-10 m-3" *ngFor="let timeSheet of timeSheets">
+        <div>
+        <app-timesheet-item [timeSheet] = timeSheet></app-timesheet-item>
+        </div>
+      </div>
+  </div>
+  </div>

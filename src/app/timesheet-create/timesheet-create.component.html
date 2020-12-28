@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <div class="create-btn-container">
+      <form class="post-form" [formGroup]="timeSheetForm" (ngSubmit)="createTimeSheet()">
+        <div class="form-group">
+          <div class="create-btn-heading">Create employee profile</div>
+          <hr />
+          <input type="datetime-local" [formControlName]="'startTime'" class="form-control" autofocus style="margin-top: 5px"
+                 placeholder="Start time">
+          <input type="datetime-local" [formControlName]="'endTime'" class="form-control" style="margin-top: 5px"
+                 placeholder="End time">
+          <input type="number" [formControlName]="'hourlyRateHRK'" class="form-control" style="margin-top: 5px"
+                 placeholder="Hourly rate in HRK">
+          <input type="text" [formControlName]="'description'" class="form-control" style="margin-top: 5px"
+                 placeholder="Additional info">
+          <div class="form-check form-check-inline m-2">
+          <input type="checkbox" [formControlName]="'paidOff'" id="paidOff" value="" class="form-check-input" style="margin-top: 5px"
+                 placeholder="employee has been paid">
+          <label for="paidOff" class="form-check-label">Employee has been paid</label>
+          </div>
+          <div>
+            <div style="margin-top: 5px" class="float-right">
+              <button (click)="discard()" class="btnDiscard">Discard</button>
+              <button class="btnCreate">Create</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
